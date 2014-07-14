@@ -8,14 +8,15 @@ require "erb"
 require "base64"
 
 class Theme
-  BASE_PATH = File.dirname(__FILE__)
+  EXEC_PATH = File.dirname(__FILE__)
+  BASE_PATH = File.expand_path( '..', File.dirname(__FILE__) )
 
   attr_accessor :template
 
   def initialize
-    @scheme_dir = File.join(BASE_PATH, "schemes")
-    @template_dir = File.join(BASE_PATH, "templates")
-    @output_dir = File.join(BASE_PATH, "output")
+    @scheme_dir = File.join(BASE_PATH, "conf")
+    @template_dir = File.join(BASE_PATH, "lib")
+    @output_dir = File.join(BASE_PATH, "tmp")
   end
 
   def build(scheme_file)
