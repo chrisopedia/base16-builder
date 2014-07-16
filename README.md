@@ -4,13 +4,13 @@ See the [Base16](https://github.com/chriskempson/base16) repository for more inf
 Requires Ruby 1.9 or greater.
 
 ## Usage
-    > ./base16
+    $ ./base16
 Build all schemes
 
-    > ./base16 default.yml
+    $ ./base16 default.yml
 Build only the "default" theme
 
-    > ./base16 https://awesome-schemes.com/my-scheme.yml
+    $ ./base16 https://awesome-schemes.com/my-scheme.yml
 Build a scheme stored on some webspace.
 
 ## Templates
@@ -26,6 +26,7 @@ Build a scheme stored on some webspace.
 * highlight.js
 * HTML Preview
 * iTerm 2
+* Marked2
 * Mate Terminal
 * MinTTY
 * Mou
