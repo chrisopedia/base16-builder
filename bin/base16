@@ -20,6 +20,8 @@ class Theme
   end
 
   def build(scheme_file)
+    # Remove all files in tmp dir
+    remove_output_files
 
     if scheme_file then
       build_single_scheme(scheme_file)
@@ -96,8 +98,6 @@ class Theme
   end
 
   def create_output_files
-    # Remove all files in tmp dir
-    remove_output_files
     # Read each
     read_template_dir.each do |template_file|
       puts "  - " + template_file # Show which file we are parsing
