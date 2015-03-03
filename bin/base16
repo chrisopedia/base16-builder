@@ -92,6 +92,7 @@ class Theme
         "hexbgr" => to_hex_bgr(hex),
         "dhex" => to_dhex(hex),
         "rgb" => to_rgb(hex),
+        "cssrgba" => to_css_rgba(hex),
         "srgb" => to_srgb(hex)
       }
     end
@@ -158,6 +159,10 @@ class Theme
 
   def to_rgb(hex)
     hex.scan(/../).map {|color| color.to_i(16)}
+  end
+
+  def to_css_rgba(hex)
+    hex.scan(/../).push("00").map { |color| color.to_i(16) }.join(", ")
   end
 
   def to_srgb(hex)
