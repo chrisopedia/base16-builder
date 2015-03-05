@@ -1,0 +1,4 @@
+# https://github.com/google/traceur-compiler/blob/master/.gitattributes
+# http://git-scm.com/docs/gitattributes
+# do not normalize line endings regardless of type
+lib/notepad-plus-plus/*.xml.erb -text
